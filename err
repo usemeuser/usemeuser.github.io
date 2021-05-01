@@ -1,0 +1,55 @@
+function onYouTubeIframeAPIReady() {
+  var player;
+  player = new YT.Player('YouTubeBackgroundVideoPlayer', {
+      videoId: '{$loadYouTubeVideoID}',
+      width: 1280,               
+      height: 720,              
+      playerVars: {
+        playlist: '{$loadYouTubeVideoID}',
+          autoplay: 1, 
+          autohide: 1,
+          disablekb: 1, 
+          controls: 0,        
+          showinfo: 0,
+          modestbranding: 1,
+          loop: 1,
+          fs: 0,
+          autohide: 0, 
+          rel: 0,
+          enablejsapi: 1
+      },
+      events: {
+
+        onReady: function(e) {
+
+            e.target.mute();
+
+            e.target.setPlaybackQuality('hd1080');
+
+        },
+
+        onStateChange: function(e) {
+
+          if(e && e.data === 1){
+
+              var videoHolder = document.getElementById('home-banner-box');
+
+              if(videoHolder && videoHolder.id){
+
+                videoHolder.classList.remove('loading');
+
+              }
+
+          }else if(e && e.data === 0){
+
+            e.target.playVideo()
+
+          }
+
+        }
+
+      }
+
+  });
+
+}
