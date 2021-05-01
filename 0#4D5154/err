@@ -1,11 +1,16 @@
 function onYouTubeIframeAPIReady() {
   var player;
   player = new YT.Player('YouTubeBackgroundVideoPlayer', {
-      videoId: '{$loadYouTubeVideoID}',
+      videoId: 'bAEA7fjqvvU',
       width: 1280,               
       height: 720,              
       playerVars: {
-        playlist: '{$loadYouTubeVideoID}',
+        playlist: 'bAEA7fjqvvU',
+          accelerometer: 1,
+          encrypted-media: 1,
+          clipboard-write: 1,
+          picture-in-picture: 1,
+          allowfullscreen: 1,
           autoplay: 1, 
           autohide: 1,
           disablekb: 1, 
@@ -13,43 +18,26 @@ function onYouTubeIframeAPIReady() {
           showinfo: 0,
           modestbranding: 1,
           loop: 1,
-          fs: 0,
+          fs: 13,
           autohide: 0, 
           rel: 0,
           enablejsapi: 1
       },
       events: {
-
         onReady: function(e) {
-
             e.target.mute();
-
             e.target.setPlaybackQuality('hd1080');
-
         },
-
         onStateChange: function(e) {
-
           if(e && e.data === 1){
-
               var videoHolder = document.getElementById('home-banner-box');
-
               if(videoHolder && videoHolder.id){
-
                 videoHolder.classList.remove('loading');
-
               }
-
           }else if(e && e.data === 0){
-
             e.target.playVideo()
-
           }
-
         }
-
       }
-
   });
-
 }
