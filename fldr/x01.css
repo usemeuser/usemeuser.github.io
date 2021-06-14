@@ -1,0 +1,118 @@
+html {
+  height: 100%;
+}
+body {
+  background-color: rgba(0.05, 0.05, 0.05, 0.99);
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px;
+  font-family: helvetica;
+}
+h1 {
+  background-color: rgba(99, 99, 99, 0.75);
+  color: white;
+  margin-top: 250px;
+  font-size: 45px;
+}
+#ahabtop {
+  /*background: #000000;*/
+  background-color: rgba(0, 0, 0, 0.44);
+  color: #ffffff;
+  display: block;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 7vw;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 3;
+  filter: blur(2px);
+}
+#ahabtop span:nth-child(2) {
+  /*background: #ff9900;*/
+  background-color: rgba(255, 153, 0, 0.89);
+  color: #000000;
+  display: inline-block;
+  border-radius: 1vw;
+  padding: 0 1vw 1vw 1vw;
+}
+#ahabdown {
+  background: #000000;
+  color: #ffffff;
+  display: block;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 9vw;
+  position: relative;
+  down: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 3;
+}
+#ahabdown span:nth-child(2) {
+  background: #ff9900;
+  color: #000000;
+  display: inline-block;
+  border-radius: 1vw;
+  padding: 0 1vw 1vw 1vw;
+}
+#ahab {
+  background: #000000;
+  color: #ffffff;
+  display: block;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 9vw;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+#ahab span:nth-child(2) {
+  background: #ff9900;
+  color: #000000;
+  display: inline-block;
+  border-radius: 1vw;
+  padding: 0 1vw 1vw 1vw;
+}
+#backgroundv {
+  margin: 0px;
+  padding: 0px;
+}
+#captionv {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0px;
+  width: 997px;
+  z-index: 2;
+  filter: blur(5px);
+}
+#mvid {
+  background: url('fldr/poster') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  filter: blur(5px);
+}
+#ii {
+  color: #ff9900;
+}
+#iix {
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
